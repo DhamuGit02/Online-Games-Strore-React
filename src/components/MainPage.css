@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #15161b !important;
+}
+
+main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-status {
+    display: none;
+}
+
+@media screen and (max-width: 990px) {
+
+    .offcanvas-header,
+    .offcanvas-body {
+        background-color: #202124;
+        color: white;
+    }
+}
+
+.games-view-panel {
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 30px;
+    flex: 0 0 300px; /* default value: don't grow or shrink, width = 300px */
+}
+
+/* On screens smaller than 600px, show one item per row */
+@media screen and (max-width: 600px) {
+    .card-container {
+        flex-basis: 100%; /* width = 100%, take up the whole row */
+        max-width: 100%; /* limit the width to prevent stretching */
+    }
+}
+
+/* On screens larger than 600px, show three items per row */
+@media screen and (min-width: 601px) {
+    .card-container {
+        flex-basis: calc((100% - 60px) / 4); /* width = (100% - space between items) / number of items */
+        max-width: calc((100% - 60px) / 4); /* limit the width to prevent stretching */
+    }
+}
+@media screen and (min-width: 720px) {
+    .card-container {
+        flex-basis: calc((100% - 60px) / 3); /* width = (100% - space between items) / number of items */
+        max-width: calc((100% - 60px) / 3); /* limit the width to prevent stretching */
+    }
+}
+.search-box-container {
+    position: relative;
+    width: 300px;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+.btn-close {
+    filter: invert(100%);
+}
+@media screen and (max-width:40rem) {
+    ul.thumbs {
+        justify-self: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .carousel-slider {
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .carousel-slider {
+        width: 85% !important;
+    }
+}
+
+.sc-gswNZR  {
+    border: none !important;
+    border-radius: 50px !important;
+    margin-bottom: 8px;
+}

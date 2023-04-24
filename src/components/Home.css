@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo {
+    margin-top: 5px;
+}
+
+.initials {
+    font-size: 2.5rem;
+}
+
+.title {
+    font-size: smaller;
+}
+

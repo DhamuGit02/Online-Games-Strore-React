@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-overview {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.game-preview-desc {
+    width: 500px;
+    height: fit-content;
+    /* margin-inline: 5%; */
+}
+.game-preview-desc > img {
+    width: 100%;
+}
+.game-purchase {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-logo {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-logo>img {
+    position: absolute;
+    width: 60%;
+    object-fit: cover;
+}
+
+.discount-price-container {
+    width: 350px;
+    height: fit-content;
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.discount-box {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    background-color: #FF4655;
+    border-radius: 5px;
+}
+
+.platform {
+    width: 350px;
+    height: fit-content;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.divider {
+    width: 350px;
+    height: 1px;
+    background-color: gray;
+    margin-top: -10px;
+}
+
+.left-side-text {
+    color: gray;
+}
+
+.specifications {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    color: azure;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5%;
+    gap: 10px;
+}
+
+.specs-list {
+    padding: 50px;
+    margin-inline: 5%;
+    max-width: 700px;
+    list-style-type: none;
+    background-color: rgb(38, 38, 38);
+    border-radius: 5px;
+}
+
+.list-item {
+    font-size: large;
+    margin-bottom: 30px;
+}
+
+.spec {
+    color: white;
+}
+
+
+@media screen and (max-width:520px){
+    .game-preview-desc, .game-purchase {
+        margin-inline: 5%;
+    }
+}
