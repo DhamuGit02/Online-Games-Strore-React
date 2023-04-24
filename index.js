@@ -13,7 +13,7 @@ app.listen(8000, () => { console.log("server running!") })
 const mysqlObj = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Dhamu@2002',
+    password: '[your password else leave it blank]',
     database: 'GameStoreDB'
 })
 
@@ -119,14 +119,3 @@ app.post("/api/get-compatible-games", (req, res) => {
         else res.json(data)
     })
 })
-
-/*
-    Above query is not proper to fetch games based on user's pc specifications i am directly fetching tha games that matches the given parameters and not checking if that some games tha have low specs than the specs being provided should also be fetched
-
-    HOW TO DO IT
-    1 - create a compatibility score column in games table which will contain avg compatibilty score of all the hardware and software specs
-    2 - create 6 extra tables to store priority scores of each hardware and software of game like (os, cpu, gpu...)
-    3 - before fetching first calculate the avg combatibilty score of provided specs by the user then try to fetch all games whose score is less than or equal to pre-calculated score in games table
-
-    ? may be this approach would work to fetch games properly by also checking the minimum requiremnts of gmaes that may fall under provided user spec
-*/
